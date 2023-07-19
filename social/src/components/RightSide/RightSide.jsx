@@ -5,8 +5,11 @@ import Noti from "../../img/noti.png";
 import Comment from "../../img/comment.png";
 import { UilSetting } from "@iconscout/react-unicons";
 import TrendCard from '../TrendCard/TrendCard';
+import ShareModel from '../ShareModel/ShareModel'
+import {useState} from 'react'
 
 const RightSide = () => {
+  const [model,setModel]=useState(false)
   return (
     <div className='RightSide'>
       
@@ -19,7 +22,8 @@ const RightSide = () => {
       
       <TrendCard/>
 
-      <button className='button s-buttom'>Share</button>
+      <button className='button s-buttom' onClick={()=>setModel(true)}>Share</button>
+       <ShareModel model={model} setModel={setModel}/>
     </div>
   )
 }

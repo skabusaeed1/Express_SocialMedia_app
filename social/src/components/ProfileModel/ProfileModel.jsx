@@ -76,7 +76,7 @@ function ProfileModel({ model, setModel}) {
             <input type="file" name="coverImg" />
         </div>
 
-        <button className="button infoButton">Update</button>
+        <button className="button infoButton" type="submit">Update</button>
       </form>
     </Modal>
   );
