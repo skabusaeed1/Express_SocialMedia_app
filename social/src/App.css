@@ -14,6 +14,10 @@
 --shedule: #E1AE4A;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
 .App{
   overflow: hidden;
   color: var(--black);
