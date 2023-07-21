@@ -2,11 +2,14 @@ import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import cors from "cors";
 import AuthRoute from "./Route/AuthRoute.js";
 import UserRoutes from "./Route/UserRoutes.js";
 import PostRoute from "./Route/PostRoute.js";
+import UploadRoute from "./Route/UploadRoute.js";
 
 const app= express();
+app.use(cors());
 app.use(bodyParser.json({limit:"30mb",extended:true}));
 app.use(bodyParser.urlencoded({limit:"30mb",extended:true}));
 dotenv.config();
@@ -25,5 +28,6 @@ mongoose.connect(process.env.MONGO_DB,{
 app.use("/auth",AuthRoute)
 app.use('/user',UserRoutes)
 app.use('/post',PostRoute)
+app.use("/upload",UploadRoute)
 
 

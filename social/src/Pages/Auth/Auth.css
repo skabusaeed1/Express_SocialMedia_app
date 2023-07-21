@@ -33,7 +33,7 @@
     gap: 2rem;
     background-color: var(--cardColor);
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 2rem;
   }
   
   .infoInput{
