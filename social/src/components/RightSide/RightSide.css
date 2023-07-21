@@ -13,6 +13,11 @@
     height: 1.5rem;
 }
 
+.navIcon>a>img{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 .s-buttom{
     height: 3rem;
     width: 80%;
